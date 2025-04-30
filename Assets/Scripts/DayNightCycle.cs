@@ -21,6 +21,7 @@ public class DayNightCycle : MonoBehaviour
 
     [Header("UI 引用")]
     [Tooltip("显示“第几天  HH:MM”的 TextMeshProUGUI")]
+    public TextMeshProUGUI DayLabel;
     public TextMeshProUGUI timeLabel;
 
     //—— 私有状态 ——//
@@ -76,7 +77,8 @@ public class DayNightCycle : MonoBehaviour
         {
             int H = Mathf.FloorToInt(hour);
             int M = Mathf.FloorToInt((hour - H) * 60f);
-            timeLabel.text = $"Day {currentDay}   {H:00}:{M:00}";
+            DayLabel.text = $"Day {currentDay}";
+            timeLabel.text = $"{H:00}:{M:00}";
         }
     }
 }
