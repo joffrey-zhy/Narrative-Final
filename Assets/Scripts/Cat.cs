@@ -1,25 +1,25 @@
 using UnityEngine;
-using UnityEngine.UI;  // ÓÃÓÚ Image
+using UnityEngine.UI;  // ç”¨äº Image
 using UnityEngine.Animations;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
 public class Cat : MonoBehaviour
 {
     [Header("Movement")]
-    [Tooltip("ÒÆ¶¯ËÙ¶È£¨µ¥Î»£ºµ¥Î»/Ãë£©")]
+    [Tooltip("ç§»åŠ¨é€Ÿåº¦ï¼ˆå•ä½ï¼šå•ä½/ç§’ï¼‰")]
     public float moveSpeed = 5f;
 
     private Rigidbody2D rb;
     private Animator animator;
 
     [Header("Stats")]
-    [Tooltip("ÈıÖÖÊôĞÔµÄ×î´óÖµ")]
+    [Tooltip("ä¸‰ç§å±æ€§çš„æœ€å¤§å€¼")]
     public float maxValue = 100f;
-    [Tooltip("Ã¿Ãë¼õÉÙ¶àÉÙ±¥Ê³¶È")]
+    [Tooltip("æ¯ç§’å‡å°‘å¤šå°‘é¥±é£Ÿåº¦")]
     public float hungerDecayPerSecond = 1f;
-    [Tooltip("Ã¿Ãë¼õÉÙ¶àÉÙ¿Ú¿Ê¶È")]
+    [Tooltip("æ¯ç§’å‡å°‘å¤šå°‘å£æ¸´åº¦")]
     public float thirstDecayPerSecond = 1.2f;
-    [Tooltip("Ã¿Ãë»Ö¸´¶àÉÙ½¡¿µ¶È")]
+    [Tooltip("æ¯ç§’æ¢å¤å¤šå°‘å¥åº·åº¦")]
     public float healthRecoveryPerSecond = 0.5f;
 
     [HideInInspector] public float hunger;
@@ -27,51 +27,39 @@ public class Cat : MonoBehaviour
     [HideInInspector] public float health;
 
     [Header("UI Bars (Image)")]
-    [Tooltip("±¥Ê³¶ÈÌî³äÌõ (Image.Type = Filled ¡ú Horizontal)")]
+    [Tooltip("é¥±é£Ÿåº¦å¡«å……æ¡ (Image.Type = Filled â†’ Horizontal)")]
     public Image hungerFill;
-    [Tooltip("¿Ú¿Ê¶ÈÌî³äÌõ (Image.Type = Filled ¡ú Horizontal)")]
+    [Tooltip("å£æ¸´åº¦å¡«å……æ¡ (Image.Type = Filled â†’ Horizontal)")]
     public Image thirstFill;
-    [Tooltip("½¡¿µ¶ÈÌî³äÌõ (Image.Type = Filled ¡ú Horizontal)")]
+    [Tooltip("å¥åº·åº¦å¡«å……æ¡ (Image.Type = Filled â†’ Horizontal)")]
     public Image healthFill;
+
+    // ç”¨æ¥ç¼“å­˜å½“å‰æ¯å¸§çš„ç§»åŠ¨æ–¹å‘
+    private Vector2 moveDir;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        rb.freezeRotation = true;
 
-        // ³õÊ¼»¯ÈıÖÖÊôĞÔÎªÂúÖµ
+        // å†»ç»“æ—‹è½¬ï¼Œé˜²æ­¢ç¢°æ’æ—¶ç¿»æ»š
+        rb.freezeRotation = true;
+        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+
+        // åˆå§‹åŒ–ä¸‰ç§å±æ€§ä¸ºæ»¡å€¼
         hunger = thirst = health = maxValue;
     }
 
     void Update()
     {
-        // ¡ª¡ª¡ª 1. ¶ÁÊäÈëÔ­Ê¼ÏòÁ¿£¬ÈÃ¶¯»­²¥·ÅÕıÈ··½Ïò ¡ª¡ª¡ª
+        // â€”â€”â€” 1. è¯»è¾“å…¥åŸå§‹å‘é‡ï¼Œè®©åŠ¨ç”»æ’­æ”¾æ­£ç¡®æ–¹å‘ â€”â€”â€”
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
         animator.SetFloat("MoveX", h);
         animator.SetFloat("MoveY", v);
 
-        // ¡ª¡ª¡ª 2. ÊôĞÔËæÊ±¼äË¥¼õ£¯»Ö¸´ ¡ª¡ª¡ª
-        hunger = Mathf.Clamp(hunger - hungerDecayPerSecond * Time.deltaTime, 0f, maxValue);
-        thirst = Mathf.Clamp(thirst - thirstDecayPerSecond * Time.deltaTime, 0f, maxValue);
-        health = Mathf.Clamp(health + healthRecoveryPerSecond * Time.deltaTime, 0f, maxValue);
-
-        // ¡ª¡ª¡ª 3. Í¬²½µ½ UI ÑªÌõ ¡ª¡ª¡ª
-        if (hungerFill != null) hungerFill.fillAmount = hunger / maxValue;
-        if (thirstFill != null) thirstFill.fillAmount = thirst / maxValue;
-        if (healthFill != null) healthFill.fillAmount = health / maxValue;
-    }
-
-    void FixedUpdate()
-    {
-        // ¡ª¡ª¡ª ¡°Ö÷µ¼ÖáÓÅÏÈ¡±ÒÆ¶¯Âß¼­£¬²»ÔÊĞí¶Ô½Ç ¡ª¡ª¡ª
-        Vector2 raw = new Vector2(
-            Input.GetAxisRaw("Horizontal"),
-            Input.GetAxisRaw("Vertical")
-        );
-
-        Vector2 moveDir = Vector2.zero;
+        // è®¡ç®—ã€Œä¸»å¯¼è½´ä¼˜å…ˆã€çš„ç›®æ ‡ç§»åŠ¨æ–¹å‘
+        Vector2 raw = new Vector2(h, v);
         if (raw != Vector2.zero)
         {
             if (Mathf.Abs(raw.x) > Mathf.Abs(raw.y))
@@ -79,13 +67,31 @@ public class Cat : MonoBehaviour
             else
                 moveDir = new Vector2(0f, Mathf.Sign(raw.y));
         }
+        else
+        {
+            moveDir = Vector2.zero;
+        }
 
-        rb.MovePosition(rb.position + moveDir * moveSpeed * Time.fixedDeltaTime);
+        // â€”â€”â€” 2. å±æ€§éšæ—¶é—´è¡°å‡ï¼æ¢å¤ â€”â€”â€”
+        hunger = Mathf.Clamp(hunger - hungerDecayPerSecond * Time.deltaTime, 0f, maxValue);
+        thirst = Mathf.Clamp(thirst - thirstDecayPerSecond * Time.deltaTime, 0f, maxValue);
+        health = Mathf.Clamp(health + healthRecoveryPerSecond * Time.deltaTime, 0f, maxValue);
+
+        // â€”â€”â€” 3. åŒæ­¥åˆ° UI è¡€æ¡ â€”â€”â€”
+        if (hungerFill != null) hungerFill.fillAmount = hunger / maxValue;
+        if (thirstFill != null) thirstFill.fillAmount = thirst / maxValue;
+        if (healthFill != null) healthFill.fillAmount = health / maxValue;
     }
 
-    // ¡ª¡ª¡ª ¶ÔÍâ½Ó¿Ú£ºÔÚÓÎÏ·ÊÂ¼şÖĞµ÷ÓÃ£¬Á¢¼´Ôö¼õÊôĞÔ²¢Ë¢ĞÂÌõ ¡ª¡ª¡ª
+    void FixedUpdate()
+    {
+        // â€”â€”â€” ç”¨ç‰©ç†é€Ÿåº¦é©±åŠ¨è§’è‰² â€”â€”â€”
+        rb.linearVelocity = moveDir * moveSpeed;
+    }
+
+    // â€”â€”â€” å¯¹å¤–æ¥å£ï¼šåœ¨æ¸¸æˆäº‹ä»¶ä¸­è°ƒç”¨ï¼Œç«‹å³å¢å‡å±æ€§å¹¶åˆ·æ–°æ¡ â€”â€”â€”
     /// <summary>
-    /// ¸Ä±ä±¥Ê³¶È£¬delta ÕıÎªÔö£¬¸ºÎª¼õ
+    /// æ”¹å˜é¥±é£Ÿåº¦ï¼Œdelta æ­£ä¸ºå¢ï¼Œè´Ÿä¸ºå‡
     /// </summary>
     public void ChangeHunger(float delta)
     {
@@ -94,7 +100,7 @@ public class Cat : MonoBehaviour
     }
 
     /// <summary>
-    /// ¸Ä±ä¿Ú¿Ê¶È£¬delta ÕıÎªÔö£¬¸ºÎª¼õ
+    /// æ”¹å˜å£æ¸´åº¦ï¼Œdelta æ­£ä¸ºå¢ï¼Œè´Ÿä¸ºå‡
     /// </summary>
     public void ChangeThirst(float delta)
     {
@@ -103,7 +109,7 @@ public class Cat : MonoBehaviour
     }
 
     /// <summary>
-    /// ¸Ä±ä½¡¿µ¶È£¬delta ÕıÎªÔö£¬¸ºÎª¼õ
+    /// æ”¹å˜å¥åº·åº¦ï¼Œdelta æ­£ä¸ºå¢ï¼Œè´Ÿä¸ºå‡
     /// </summary>
     public void ChangeHealth(float delta)
     {
