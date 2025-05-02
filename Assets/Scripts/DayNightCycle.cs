@@ -27,6 +27,7 @@ public class DayNightCycle : MonoBehaviour
     //—— 私有状态 ——//
     private float timeInDay = 0f;
     private int currentDay = 1;
+    private float currentHour = 0f;  // 新：存储每帧计算后的小时数
 
     void Update()
     {
@@ -44,27 +45,24 @@ public class DayNightCycle : MonoBehaviour
 
         // —— 3. 计算当前“真实”小时 (0-24) —— //
         float hour = (startHour + t * 24f) % 24f;
+        currentHour = hour;  // 保存下来供外部读取
 
         // —— 4. 计算并应用全局光照强度 —— //
         float intensity;
         if (hour >= 17f || hour < 2f)
         {
-            // 17:00→24:00→(0→2:00)，共 9 小时
             float hrsSince17 = hour >= 17f ? hour - 17f : hour + 24f - 17f;
             intensity = Mathf.Lerp(1f, 0f, hrsSince17 / 9f);
         }
         else if (hour >= 2f && hour < 12f)
         {
-            // 2:00→12:00，共 10 小时
             float hrsSince2 = hour - 2f;
             intensity = Mathf.Lerp(0f, 1f, hrsSince2 / 10f);
         }
         else
         {
-            // 12:00→17:00 保持最亮
             intensity = 1f;
         }
-
         if (globalLight != null)
             globalLight.intensity = intensity;
 
@@ -81,4 +79,10 @@ public class DayNightCycle : MonoBehaviour
             timeLabel.text = $"{H:00}:{M:00}";
         }
     }
+
+    // —— 对外属性 —— //
+    /// <summary>当前是第几天（1-based）</summary>
+    public int CurrentDay => currentDay;
+    /// <summary>当前“真实”时间的小时数 [0,24)</summary>
+    public float CurrentHour => currentHour;
 }

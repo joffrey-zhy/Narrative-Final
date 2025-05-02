@@ -20,11 +20,11 @@ public class Cat : MonoBehaviour
     [Tooltip("每秒减少多少口渴度")]
     public float thirstDecayPerSecond = 1.2f;
     [Tooltip("每秒恢复多少健康度")]
-    public float healthRecoveryPerSecond = 0.5f;
+    public float healthRecoveryPerSecond = 0.1f;
 
-    [HideInInspector] public float hunger;
-    [HideInInspector] public float thirst;
-    [HideInInspector] public float health;
+    public float hunger;
+    public float thirst;
+    public float health;
 
     [Header("UI Bars (Image)")]
     [Tooltip("饱食度填充条 (Image.Type = Filled → Horizontal)")]
