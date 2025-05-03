@@ -1,0 +1,1222 @@
+fileFormatVersion: 2
+guid: 83ad71d8703aab144b3bb6bc8d58d14f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1879899620331732048
+    second: Children_0
+  - first:
+      213: -8430027504291634105
+    second: Children_1
+  - first:
+      213: -9464351406944621
+    second: Children_2
+  - first:
+      213: -4539933761856402076
+    second: Children_3
+  - first:
+      213: 5931063562813823170
+    second: Children_4
+  - first:
+      213: -3908047937458618009
+    second: Children_5
+  - first:
+      213: -8748419435891238791
+    second: Children_6
+  - first:
+      213: -6765685529898779887
+    second: Children_7
+  - first:
+      213: -8174642791285032446
+    second: Children_8
+  - first:
+      213: 7012707954858410921
+    second: Children_9
+  - first:
+      213: 1256557540452816354
+    second: Children_10
+  - first:
+      213: 2858414875290547798
+    second: Children_11
+  - first:
+      213: -7623241066869831294
+    second: Children_12
+  - first:
+      213: 4472418559720836770
+    second: Children_13
+  - first:
+      213: -8057387489411481585
+    second: Children_14
+  - first:
+      213: -9104987174475462345
+    second: Children_15
+  - first:
+      213: 4117239230520030788
+    second: Children_16
+  - first:
+      213: 8271947735624373093
+    second: Children_17
+  - first:
+      213: -1801643022943493544
+    second: Children_18
+  - first:
+      213: -8898184405413050742
+    second: Children_19
+  - first:
+      213: -1914045519693665189
+    second: Children_20
+  - first:
+      213: 2369342183604871402
+    second: Children_21
+  - first:
+      213: -3142521171541550410
+    second: Children_22
+  - first:
+      213: 8833979441284497681
+    second: Children_23
+  - first:
+      213: -3766949958042885855
+    second: Children_24
+  - first:
+      213: -7624748779445075022
+    second: Children_25
+  - first:
+      213: -5466741091903121644
+    second: Children_26
+  - first:
+      213: -8139345691136242323
+    second: Children_27
+  - first:
+      213: 2649196297887607719
+    second: Children_28
+  - first:
+      213: 5362346614815411763
+    second: Children_29
+  - first:
+      213: 4007619626759971749
+    second: Children_30
+  - first:
+      213: -4047105088261490221
+    second: Children_31
+  - first:
+      213: 2252112326160471072
+    second: Children_32
+  - first:
+      213: -8503490342917250901
+    second: Children_33
+  - first:
+      213: 4612746703483161174
+    second: Children_34
+  - first:
+      213: -2274812413473743070
+    second: Children_35
+  - first:
+      213: 8227142105817956306
+    second: Children_36
+  - first:
+      213: -556015989110827405
+    second: Children_37
+  - first:
+      213: 1755483642448887784
+    second: Children_38
+  - first:
+      213: 5699835294340976336
+    second: Children_39
+  - first:
+      213: -2789783374395153965
+    second: Children_40
+  - first:
+      213: 3379965003043043277
+    second: Children_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Children_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1471
+        width: 96
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b34cb4614149e5e0800000000000000
+      internalID: -1879899620331732048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 982
+        height: 1523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 744ace726a6820b80800000000000000
+      internalID: -8430027504291634105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1495
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e0c58f8306edff0800000000000000
+      internalID: -9464351406944621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1404
+        width: 22
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46d0fb41c4aeef0c0800000000000000
+      internalID: -4539933761856402076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_4
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 1400
+        width: 200
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c8d7c1e2ee5f4250800000000000000
+      internalID: 5931063562813823170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_5
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1438
+        width: 60
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761c49a4b13d3c9c0800000000000000
+      internalID: -3908047937458618009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_6
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 1491
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9785499cfde579680800000000000000
+      internalID: -8748419435891238791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_7
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 1413
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11bf1605bd47b12a0800000000000000
+      internalID: -6765685529898779887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_8
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 1369
+        width: 11
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20a7fb341b5dd8e80800000000000000
+      internalID: -8174642791285032446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1375
+        width: 9
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a344e2eab4225160800000000000000
+      internalID: 7012707954858410921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1327
+        width: 11
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e5578eec60307110800000000000000
+      internalID: 1256557540452816354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_11
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 877
+        width: 184
+        height: 493
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 656b26e3f212ba720800000000000000
+      internalID: 2858414875290547798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1205
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 289cd0ca3aec43690800000000000000
+      internalID: -7623241066869831294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_13
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 1162
+        width: 37
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ae4603fbf8311e30800000000000000
+      internalID: 4472418559720836770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_14
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 1148
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f00c3fba4c86e2090800000000000000
+      internalID: -8057387489411481585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_15
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 1127
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73907e4b76694a180800000000000000
+      internalID: -9104987174475462345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_16
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 1101
+        width: 11
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 446f27e144f532930800000000000000
+      internalID: 4117239230520030788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1085
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 563dc7e83acdbc270800000000000000
+      internalID: 8271947735624373093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_18
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 1075
+        width: 5
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 852646557374ff6e0800000000000000
+      internalID: -1801643022943493544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_19
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 1029
+        width: 36
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a864f698d6c438480800000000000000
+      internalID: -8898184405413050742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 679
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5c2bbaadb1ff65e0800000000000000
+      internalID: -1914045519693665189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 413
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae0ed15a92891e020800000000000000
+      internalID: 2369342183604871402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 389
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ba1f1fe4a58364d0800000000000000
+      internalID: -3142521171541550410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_23
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 393
+        width: 124
+        height: 632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 111cdd65f79989a70800000000000000
+      internalID: 8833979441284497681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_24
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 380
+        width: 30
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1216e28a8fa19bbc0800000000000000
+      internalID: -3766949958042885855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_25
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 458
+        width: 20
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b3459bf1637f2690800000000000000
+      internalID: -7624748779445075022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_26
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 508
+        width: 10
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4175512e0fb3224b0800000000000000
+      internalID: -5466741091903121644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 345
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6dc7bfc73c3b0f80800000000000000
+      internalID: -8139345691136242323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_28
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 266
+        width: 43
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7abeed33ff5d3c420800000000000000
+      internalID: 2649196297887607719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 309
+        width: 5
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33e4792d5d1ea6a40800000000000000
+      internalID: 5362346614815411763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_30
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 167
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a369e731dced9730800000000000000
+      internalID: 4007619626759971749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_31
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 205
+        width: 19
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d97f7d5d5bc5d7c0800000000000000
+      internalID: -4047105088261490221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 117
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 024d21b7a3c114f10800000000000000
+      internalID: 2252112326160471072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_33
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 101
+        width: 69
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba0e37726988df980800000000000000
+      internalID: -8503490342917250901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_34
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 139
+        width: 12
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65ac7fbffa4c30040800000000000000
+      internalID: 4612746703483161174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 73
+        width: 12
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22f9f34992e3e60e0800000000000000
+      internalID: -2274812413473743070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 41
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df30fde72eac2270800000000000000
+      internalID: 8227142105817956306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_37
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 60
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3769c9f5762a848f0800000000000000
+      internalID: -556015989110827405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_38
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 31
+        width: 46
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8efbc25621bbc5810800000000000000
+      internalID: 1755483642448887784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_39
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 64
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0de8d6d4002e91f40800000000000000
+      internalID: 5699835294340976336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 14
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d1e2e84dc2b849d0800000000000000
+      internalID: -2789783374395153965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Children_41
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 0
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc7f1af234c08ee20800000000000000
+      internalID: 3379965003043043277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Children_0: -1879899620331732048
+      Children_1: -8430027504291634105
+      Children_10: 1256557540452816354
+      Children_11: 2858414875290547798
+      Children_12: -7623241066869831294
+      Children_13: 4472418559720836770
+      Children_14: -8057387489411481585
+      Children_15: -9104987174475462345
+      Children_16: 4117239230520030788
+      Children_17: 8271947735624373093
+      Children_18: -1801643022943493544
+      Children_19: -8898184405413050742
+      Children_2: -9464351406944621
+      Children_20: -1914045519693665189
+      Children_21: 2369342183604871402
+      Children_22: -3142521171541550410
+      Children_23: 8833979441284497681
+      Children_24: -3766949958042885855
+      Children_25: -7624748779445075022
+      Children_26: -5466741091903121644
+      Children_27: -8139345691136242323
+      Children_28: 2649196297887607719
+      Children_29: 5362346614815411763
+      Children_3: -4539933761856402076
+      Children_30: 4007619626759971749
+      Children_31: -4047105088261490221
+      Children_32: 2252112326160471072
+      Children_33: -8503490342917250901
+      Children_34: 4612746703483161174
+      Children_35: -2274812413473743070
+      Children_36: 8227142105817956306
+      Children_37: -556015989110827405
+      Children_38: 1755483642448887784
+      Children_39: 5699835294340976336
+      Children_4: 5931063562813823170
+      Children_40: -2789783374395153965
+      Children_41: 3379965003043043277
+      Children_5: -3908047937458618009
+      Children_6: -8748419435891238791
+      Children_7: -6765685529898779887
+      Children_8: -8174642791285032446
+      Children_9: 7012707954858410921
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
