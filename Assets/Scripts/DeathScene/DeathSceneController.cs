@@ -7,7 +7,7 @@ public class DeathSceneController : MonoBehaviour
 {
     [Header("被激活的 UI Canvas（开始时保持禁用）")]
     public Canvas targetCanvas;
-
+    public GameObject cat;
     [Header("按键提示 UI 游戏对象")]
     public GameObject keyUIPrompt;
 
@@ -73,6 +73,7 @@ public class DeathSceneController : MonoBehaviour
         // 玩家在范围内按 E，就打开 Canvas 并隐藏提示
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
+            cat.SetActive(false);
             if (targetCanvas != null)
                 targetCanvas.gameObject.SetActive(true);
             if (keyUIPrompt != null)
@@ -81,6 +82,14 @@ public class DeathSceneController : MonoBehaviour
     }
 
     public void OnQuitButton()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
+    public void OnMainMenuButton()
     {
         // 点击退出调用淡出再切场景
         if (fadeImage != null)
