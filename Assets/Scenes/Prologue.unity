@@ -390,8 +390,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7ae49941b511b494db64b328ae80c326, type: 2}
+  m_sharedMaterial: {fileID: 1756342046750457161, guid: 7ae49941b511b494db64b328ae80c326, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -879,15 +879,15 @@ MonoBehaviour:
   fadeImage: {fileID: 10073726}
   fadeDuration: 2
   openingText: {fileID: 946223477}
-  fullOpeningText: At that time, the world was warm and safe. There are soft cushions,
-    always full rice bowls, and a pair of hands that gently caress the top of its
-    head. Those hands carry a familiar warmth and smell, and each touch is like a
-    silent promise to me, promising eternal shelter and unchanging love. At that
-    moment a voice came. I remember the voice, its gentle call to a name, its tone
-    full of pampering. I'd rub my head against the warm palm of my hand, or turn
-    over lazily, revealing my soft belly, an expression of my total trust in him.
-    The sunny house, the warm mattress, and the gentle touch are all there is to
-    my world. On this day, they took me to a car that resembled a house.
+  fullOpeningText: Back then, the world was warm and safe. There were soft mats,
+    a food bowl that was always full, and a pair of hands that gently stroked the
+    top of its head. Those hands carried a familiar warmth and smell; each touch
+    was like a silent promise of eternal shelter and unchanging love. At that moment,
+    a voice came. You remember that voice; it tenderly called out a name. You would
+    rub your head against the warm palm or lazily roll over, revealing your soft
+    belly, expressing your total trust in him. A sunny house, a warm mattress, a
+    gentle touch, that's all your world has to offer. Today, they take you in a car
+    that looks like a house.
   typeSpeed: 0.03
   continuePromptText: {fileID: 1391457466}
   continuePrompt: Press Enter to continue...
