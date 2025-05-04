@@ -4,6 +4,7 @@ using UnityEngine.UI;            // 用于 Image
 using TMPro;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(AudioSource))]
 public class OpeningTypewriter : MonoBehaviour
 {
     [Header("Fade Settings")]
@@ -23,9 +24,26 @@ public class OpeningTypewriter : MonoBehaviour
     public string continuePrompt = "Press Enter to continue...";
     public float promptTypeSpeed = 0.03f;
 
+    [Header("Audio Settings")]
+    [Tooltip("循环播放的打字音效")]
+    public AudioClip typingClip;
+    [Tooltip("打字音效音量")]
+    [Range(0f, 1f)] public float typingVolume = 1f;
+
+    private AudioSource audioSource;
     private bool openingFinished = false;
     private bool promptFinished = false;
     private bool transitioning = false;  // 防止重复触发
+
+    void Awake()
+    {
+        // 准备 AudioSource
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = typingClip;
+        audioSource.loop = true;
+        audioSource.playOnAwake = false;
+        audioSource.volume = typingVolume;
+    }
 
     void Start()
     {
@@ -49,7 +67,6 @@ public class OpeningTypewriter : MonoBehaviour
     private IEnumerator FadeInThenStart()
     {
         float timer = 0f;
-        // alpha 从 1 → 0
         while (timer < fadeDuration)
         {
             timer += Time.deltaTime;
@@ -72,7 +89,6 @@ public class OpeningTypewriter : MonoBehaviour
                 transitioning = true;
                 if (fadeImage != null)
                 {
-                    // 先淡出再切场景
                     fadeImage.gameObject.SetActive(true);
                     StartCoroutine(FadeOutAndLoad("HeyiScene"));
                 }
@@ -87,7 +103,6 @@ public class OpeningTypewriter : MonoBehaviour
     private IEnumerator FadeOutAndLoad(string sceneName)
     {
         float timer = 0f;
-        // 确保从透明开始
         fadeImage.color = new Color(0f, 0f, 0f, 0f);
 
         while (timer < fadeDuration)
@@ -105,11 +120,21 @@ public class OpeningTypewriter : MonoBehaviour
     private IEnumerator TypeOpening()
     {
         if (openingText == null) yield break;
+
+        // 开始打字时启动循环音效
+        if (typingClip != null)
+            audioSource.Play();
+
         foreach (char c in fullOpeningText)
         {
             openingText.text += c;
             yield return new WaitForSeconds(typeSpeed);
         }
+
+        // 打字结束时停止音效
+        if (typingClip != null)
+            audioSource.Stop();
+
         openingFinished = true;
         StartCoroutine(TypePrompt());
     }
