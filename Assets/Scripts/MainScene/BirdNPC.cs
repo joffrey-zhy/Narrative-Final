@@ -3,9 +3,9 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class BirdNPC : MonoBehaviour
 {
-    [Header("Movement Bounds (world X positions)")]
-    public float leftLimit = -5f;    // 区间最左端 x 坐标
-    public float rightLimit = 5f;    // 区间最右端 x 坐标
+    [Header("Movement Bounds (offsets from parent X)")]
+    public float leftLimit = -5f;    // 相对于父物体 X 的最左偏移
+    public float rightLimit = 5f;    // 相对于父物体 X 的最右偏移
 
     [Header("Random Distance Range")]
     public float minWalkDistance = 1f;  // 每次行走的最小距离
@@ -14,7 +14,7 @@ public class BirdNPC : MonoBehaviour
     [Header("Speed")]
     public float moveSpeed = 2f;      // 行走速度
 
-    private float targetX;            // 本次目标 x 坐标
+    private float targetX;            // 本次目标世界 X 坐标
     private int direction = 1;        // 当前行走方向：1 向右，-1 向左
 
     private Animator animator;
@@ -27,7 +27,7 @@ public class BirdNPC : MonoBehaviour
 
     void Update()
     {
-        // 朝目标移动
+        // 按当前方向移动
         float step = moveSpeed * Time.deltaTime * direction;
         transform.Translate(step, 0f, 0f);
 
@@ -40,40 +40,47 @@ public class BirdNPC : MonoBehaviour
     }
 
     /// <summary>
-    /// 随机选择下一个目标点并设置动画
+    /// 随机选择下一个目标点（基于父物体坐标），并设置动画
     /// </summary>
     private void PickNextTarget()
     {
-        // 随机决定下次行走方向
+        // 1) 确定基准 X（父物体的世界坐标）
+        float baseX = transform.parent != null
+            ? transform.parent.position.x
+            : transform.position.x;
+
+        // 2) 随机行走方向
         direction = (Random.value < 0.5f) ? -1 : 1;
 
-        // 随机决定行走距离
+        // 3) 随机行走距离
         float distance = Random.Range(minWalkDistance, maxWalkDistance);
 
-        // 计算目标 x，并 clamp 到左右边界
-        if (direction > 0)
-            targetX = Mathf.Min(transform.position.x + distance, rightLimit);
-        else
-            targetX = Mathf.Max(transform.position.x - distance, leftLimit);
+        // 4) 计算相对于 baseX 的最小／最大限位
+        float minX = baseX + leftLimit;
+        float maxX = baseX + rightLimit;
 
-        // 根据方向切换动画
+        // 5) 根据方向决定目标点，并 clamp 在 [minX, maxX] 内
         if (direction > 0)
-        {
-            animator.SetFloat("MoveX", +1f);
-        }
+            targetX = Mathf.Min(baseX + distance, maxX);
         else
-        {
-            animator.SetFloat("MoveX", -1f);
-        }
+            targetX = Mathf.Max(baseX - distance, minX);
+
+        // 6) 切换动画参数
+        animator.SetFloat("MoveX", direction);
     }
 
-    // Gizmos：在 Scene 视图中可视化左右边界
+    // 在 Scene 视图中可视化左右边界（相对于父物体）
     void OnDrawGizmosSelected()
     {
+        if (transform.parent == null) return;
+
+        float baseX = transform.parent.position.x;
+        float y = transform.parent.position.y;
+        float minX = baseX + leftLimit;
+        float maxX = baseX + rightLimit;
+
         Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(new Vector3(leftLimit, transform.position.y - 1, 0),
-                        new Vector3(leftLimit, transform.position.y + 1, 0));
-        Gizmos.DrawLine(new Vector3(rightLimit, transform.position.y - 1, 0),
-                        new Vector3(rightLimit, transform.position.y + 1, 0));
+        Gizmos.DrawLine(new Vector3(minX, y - 1f, 0f), new Vector3(minX, y + 1f, 0f));
+        Gizmos.DrawLine(new Vector3(maxX, y - 1f, 0f), new Vector3(maxX, y + 1f, 0f));
     }
 }
