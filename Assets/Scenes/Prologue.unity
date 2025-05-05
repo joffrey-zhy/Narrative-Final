@@ -888,7 +888,7 @@ MonoBehaviour:
     belly, expressing your total trust in him. A sunny house, a warm mattress, a
     gentle touch, that's all your world has to offer. Today, they take you in a car
     that looks like a house.
-  typeSpeed: 0.03
+  typeSpeed: 0.05
   continuePromptText: {fileID: 1391457466}
   skipPrompt: Press Enter to skip
   continuePrompt: Press Enter to continue...

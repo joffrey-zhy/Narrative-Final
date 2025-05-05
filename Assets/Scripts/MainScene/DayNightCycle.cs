@@ -1,37 +1,37 @@
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
+
 using TMPro;
 using UnityEngine.Rendering.Universal;
 
 public class DayNightCycle : MonoBehaviour
 {
-    [Header("Ê±¼äÉèÖÃ")]
-    [Tooltip("µ¥ÈÕÊ±³¤£¨Ãë£©£¬Ä¬ÈÏ 5 ·ÖÖÓ = 300 Ãë£©")]
+    [Header("Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")]
+    [Tooltip("ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ë£©ï¿½ï¿½Ä¬ï¿½ï¿½ 5 ï¿½ï¿½ï¿½ï¿½ = 300 ï¿½ë£©")]
     public float dayDuration = 300f;
-    [Tooltip("Ñ­»·¶àÉÙÌìºóÖØÖÃ£¨ÓÎÏ·ÖÜÆÚ£©")]
+    [Tooltip("Ñ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½Ú£ï¿½")]
     public int totalDays = 3;
-    [Tooltip("ÓÎÏ·¿ªÊ¼Ê±¼ä£¬¶ÔÓ¦ÕæÊµÖÓµã£¬½« t=0 Ó³Éäµ½Õâ¸öÐ¡Ê±")]
+    [Tooltip("ï¿½ï¿½Ï·ï¿½ï¿½Ê¼Ê±ï¿½ä£¬ï¿½ï¿½Ó¦ï¿½ï¿½Êµï¿½Óµã£¬ï¿½ï¿½ t=0 Ó³ï¿½äµ½ï¿½ï¿½ï¿½Ð¡Ê±")]
     [Range(0f, 24f)] public float startHour = 7f;
 
-    [Header("¹âÔ´ÒýÓÃ")]
-    [Tooltip("³¡¾°ÖÐµÄ Global Light 2D")]
+    [Header("ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½")]
+    [Tooltip("ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ Global Light 2D")]
     public Light2D globalLight;
-    [Tooltip("Ò¹ÍíÊ±µãÁÁµÄÃ¨¾Ö²¿¹âÔ´£¨¿ÉÑ¡£©")]
+    [Tooltip("Ò¹ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¨ï¿½Ö²ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½")]
     public Light2D catLight;
 
-    [Header("UI ÒýÓÃ")]
-    [Tooltip("ÏÔÊ¾¡°µÚ¼¸Ìì  HH:MM¡±µÄ TextMeshProUGUI")]
+    [Header("UI ï¿½ï¿½ï¿½ï¿½")]
+    [Tooltip("ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½  HH:MMï¿½ï¿½ï¿½ï¿½ TextMeshProUGUI")]
     public TextMeshProUGUI DayLabel;
     public TextMeshProUGUI timeLabel;
 
-    //¡ª¡ª Ë½ÓÐ×´Ì¬ ¡ª¡ª//
+    //ï¿½ï¿½ï¿½ï¿½ Ë½ï¿½ï¿½×´Ì¬ ï¿½ï¿½ï¿½ï¿½//
     private float timeInDay = 0f;
     private int currentDay = 1;
-    private float currentHour = 0f;  // ÐÂ£º´æ´¢Ã¿Ö¡¼ÆËãºóµÄÐ¡Ê±Êý
+    private float currentHour = 0f;  // ï¿½Â£ï¿½ï¿½æ´¢Ã¿Ö¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡Ê±ï¿½ï¿½
 
     void Update()
     {
-        // ¡ª¡ª 1. ÍÆ½øÓÎÏ·Ê±ÖÓ ¡ª¡ª //
+        // ï¿½ï¿½ï¿½ï¿½ 1. ï¿½Æ½ï¿½ï¿½ï¿½Ï·Ê±ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ //
         timeInDay += Time.deltaTime;
         if (timeInDay >= dayDuration)
         {
@@ -40,14 +40,14 @@ public class DayNightCycle : MonoBehaviour
             if (currentDay > totalDays) currentDay = 1;
         }
 
-        // ¡ª¡ª 2. ¹éÒ»»¯ t (0¡ú1) ¡ª¡ª //
+        // ï¿½ï¿½ï¿½ï¿½ 2. ï¿½ï¿½Ò»ï¿½ï¿½ t (0ï¿½ï¿½1) ï¿½ï¿½ï¿½ï¿½ //
         float t = timeInDay / dayDuration;
 
-        // ¡ª¡ª 3. ¼ÆËãµ±Ç°¡°ÕæÊµ¡±Ð¡Ê± (0-24) ¡ª¡ª //
+        // ï¿½ï¿½ï¿½ï¿½ 3. ï¿½ï¿½ï¿½ãµ±Ç°ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½Ð¡Ê± (0-24) ï¿½ï¿½ï¿½ï¿½ //
         float hour = (startHour + t * 24f) % 24f;
-        currentHour = hour;  // ±£´æÏÂÀ´¹©Íâ²¿¶ÁÈ¡
+        currentHour = hour;  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â²¿ï¿½ï¿½È¡
 
-        // ¡ª¡ª 4. ¼ÆËã²¢Ó¦ÓÃÈ«¾Ö¹âÕÕÇ¿¶È ¡ª¡ª //
+        // ï¿½ï¿½ï¿½ï¿½ 4. ï¿½ï¿½ï¿½ã²¢Ó¦ï¿½ï¿½È«ï¿½Ö¹ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ //
         float intensity;
         if (hour >= 17f || hour < 2f)
         {
@@ -66,11 +66,11 @@ public class DayNightCycle : MonoBehaviour
         if (globalLight != null)
             globalLight.intensity = intensity;
 
-        // ¡ª¡ª 5. Ò¹Íí¿ª/¹ØÃ¨¾Ö²¿¹âÔ´ ¡ª¡ª //
+        // ï¿½ï¿½ï¿½ï¿½ 5. Ò¹ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½Ã¨ï¿½Ö²ï¿½ï¿½ï¿½Ô´ ï¿½ï¿½ï¿½ï¿½ //
         if (catLight != null)
             catLight.enabled = (hour >= 22f || hour < 4f);
 
-        // ¡ª¡ª 6. Ë¢ÐÂ UI Ê±¼äÏÔÊ¾ ¡ª¡ª //
+        // ï¿½ï¿½ï¿½ï¿½ 6. Ë¢ï¿½ï¿½ UI Ê±ï¿½ï¿½ï¿½ï¿½Ê¾ ï¿½ï¿½ï¿½ï¿½ //
         if (timeLabel != null)
         {
             int H = Mathf.FloorToInt(hour);
@@ -80,9 +80,9 @@ public class DayNightCycle : MonoBehaviour
         }
     }
 
-    // ¡ª¡ª ¶ÔÍâÊôÐÔ ¡ª¡ª //
-    /// <summary>µ±Ç°ÊÇµÚ¼¸Ìì£¨1-based£©</summary>
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ //
+    /// <summary>ï¿½ï¿½Ç°ï¿½ÇµÚ¼ï¿½ï¿½ì£¨1-basedï¿½ï¿½</summary>
     public int CurrentDay => currentDay;
-    /// <summary>µ±Ç°¡°ÕæÊµ¡±Ê±¼äµÄÐ¡Ê±Êý [0,24)</summary>
+    /// <summary>ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ð¡Ê±ï¿½ï¿½ [0,24)</summary>
     public float CurrentHour => currentHour;
 }
